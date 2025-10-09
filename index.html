@@ -17,6 +17,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -27,6 +28,10 @@
         <div class="sub">And I'm  <span style="color:var(--white)"><strong style="color:var(--accent)">Aiza Tugolbaeva,</strong></span></div>
 
         <p>a 2nd year student at Ala-Too College, and I'm 17 years old. I've previously studied Python and HTML, and I'd like to learn more and improve my frontend skills.</p>
+        <div class="greeting-wrapper">
+          <h2 id="greeting">Добро пожаловать!</h2>
+          <button id="askName" class="btn btn-primary">Сказать имя</button>
+        </div>
 
         <div class="socials" aria-hidden="false">
           <a class="icon-btn" href="#" title="Facebook" aria-label="Facebook">
@@ -98,64 +103,164 @@
     </article>
   </section>
 
-  <!-- SKILLS SECTION -->
-  <section class="skills-section" id="skills">
-    <h2 class="section-title centered">My <span>Skills</span></h2>
+  <!-- SKILLS SECTION (исправлённый) -->
+<section class="skills-section" id="skills">
+  <h2 class="section-title centered">My <span>Skills</span></h2>
 
-    <div class="skills-grid">
-      <div class="skills-col">
-        <div class="skill">
-          <div class="skill-center">
-            <img src="html-icon.png" alt="HTML" class="skill-icon">
-            <div class="skill-name">HTML</div>
-          </div>
-          <div class="skill-bar" data-percent="30">
-            <div class="skill-fill"></div>
-            <div class="skill-percent">20%</div>
-          </div>
+  <div class="skills-grid">
+    <div class="skills-col">
+      <div class="skill">
+        <div class="skill-center">
+          <img src="html-icon.png" alt="HTML" class="skill-icon">
+          <div class="skill-name">HTML</div>
         </div>
+        <div class="skill-bar" data-percent="80">
+          <div class="skill-fill"></div>
+          <div class="skill-percent">80%</div>
+        </div>
+      </div>
 
-      <div class="skills-col">
-        <div class="skill">
-          <div class="skill-center">
-            <img src="css-icon.png" alt="CSS" class="skill-icon">
-            <div class="skill-name">CSS</div>
-          </div>
-          <div class="skill-bar" data-percent="35">
-            <div class="skill-fill"></div>
-            <div class="skill-percent">10%</div>
-          </div>
+      <div class="skill">
+        <div class="skill-center">
+          <img src="css-icon.png" alt="CSS" class="skill-icon">
+          <div class="skill-name">CSS</div>
         </div>
+        <div class="skill-bar" data-percent="70">
+          <div class="skill-fill"></div>
+          <div class="skill-percent">70%</div>
+        </div>
+      </div>
+    </div>
 
-        <div class="skill">
-          <div class="skill-center">
-            <img src="js-icon.png" alt="JS" class="skill-icon">
-            <div class="skill-name">JavaScript</div>
-          </div>
-          <div class="skill-bar" data-percent="40">
-            <div class="skill-fill"></div>
-            <div class="skill-percent">10%</div>
-          </div>
+    <div class="skills-col">
+      <div class="skill">
+        <div class="skill-center">
+          <img src="js-icon.png" alt="JS" class="skill-icon">
+          <div class="skill-name">JavaScript</div>
         </div>
+        <div class="skill-bar" data-percent="60">
+          <div class="skill-fill"></div>
+          <div class="skill-percent">60%</div>
+        </div>
+      </div>
 
-        <div class="skill">
-          <div class="skill-center">
-            <img src="Elipse 3.png" alt="Figma" class="skill-icon">
-            <div class="skill-name">Figma</div>
-          </div>
-          <div class="skill-bar" data-percent="40">
-            <div class="skill-fill"></div>
-            <div class="skill-percent">20%</div>
-          </div>
+      <div class="skill">
+        <div class="skill-center">
+          <img src="Elipse 3.png" alt="Figma" class="skill-icon">
+          <div class="skill-name">Figma</div>
         </div>
-              </div> 
-    </div> 
-  </section>
+        <div class="skill-bar" data-percent="50">
+          <div class="skill-fill"></div>
+          <div class="skill-percent">50%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- My Services Section -->
+<section class="services-section" id="services">
+  <h2 class="section-title centered">My <span>Services</span></h2>
+
+  <div class="three-cols">
+    <div class="service-card">
+      <div class="icon">💻</div>
+      <h3 class="service-title">Web Development</h3>
+      <p class="service-text">Creating modern and responsive websites using HTML, CSS, and JavaScript with clean, maintainable code.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="icon">🎨</div>
+      <h3 class="service-title">UI / UX Design</h3>
+      <p class="service-text">Designing smooth and visually appealing interfaces that are intuitive and user-friendly.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="icon">⚙️</div>
+      <h3 class="service-title">Backend Integration</h3>
+      <p class="service-text">Connecting front-end with servers and APIs to bring websites and apps to life.</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="portfolio-section" id="portfolio">
+  <h2 class="section-title centered">My <span>Portfolio</span></h2>
+
+  <div class="three-cols">
+    <div class="card">
+      <img src="card-1.jpg" alt="Project 1" class="card-img">
+      <div class="card-body">
+        <h3 class="card-title">Проект 1</h3>
+        <p class="card-text">Короткое описание проекта — что делает и почему классно.</p>
+      </div>
+      <div class="card-footer">
+        <a href="#" class="btn small">Подробнее</a>
+        <a href="#" class="btn outline small">Демо</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="card-2.jpg" alt="Project 2" class="card-img">
+      <div class="card-body">
+        <h3 class="card-title">Проект 2</h3>
+        <p class="card-text">Короткое описание проекта — технологии и результат.</p>
+      </div>
+      <div class="card-footer">
+        <a href="#" class="btn small">Подробнее</a>
+        <a href="#" class="btn outline small">Демо</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="card-3.jpg" alt="Project 3" class="card-img">
+      <div class="card-body">
+        <h3 class="card-title">Проект 3</h3>
+        <p class="card-text">Короткое описание — фокус на самом важном.</p>
+      </div>
+      <div class="card-footer">
+        <a href="#" class="btn small">Подробнее</a>
+        <a href="#" class="btn outline small">Демо</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ---------- CONTACT ME ---------- -->
+<section class="contact-section" id="contact">
+  <div class="container contact-row">
+    
+    <!-- Левый блок с текстом -->
+    <div class="contact-text">
+      <h2 class="section-title">Contact <span>Me</span></h2>
+      <p>Hello! I’m always open to discussing new projects, creative ideas, or opportunities to be part of your visions. Feel free to send me a message, and I’ll get back to you as soon as possible!</p>
+      <p>You can use the form on the right to reach out with your questions or proposals.</p>
+    </div>
+    
+    <!-- Правая колонка с формой -->
+    <form class="contact-form">
+      <div class="form-row">
+        <input type="text" name="firstName" placeholder="First Name" required>
+        <input type="text" name="lastName" placeholder="Last Name" required>
+      </div>
+      <div class="form-row">
+        <input type="email" name="email" placeholder="Email" required>
+      </div>
+      <div class="form-row">
+        <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Send</button>
+    </form>
+
+  </div>
+</section>
+
 
   <footer class="footer">
     <p>© 2025 Tugolbaeva Aiza. All Rights Reserved.</p>
   </footer>
 
-  <script src="main.js"></script>
+  <script src = "script.js"></script>
+
 </body>
 </html>
