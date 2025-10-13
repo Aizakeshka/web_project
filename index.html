@@ -3,265 +3,252 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My portfolio</title>
-  <link rel="icon" href="logo.jpg">
+  <title>Aiza Tugolbaeva - Portfolio</title>
+  <link rel="icon" type="image" href="FullLogo-round.png">
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <header class="hero" role="banner">
-    <nav class="nav" aria-label="Главная навигация">
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+  <section id="home">
+    <div class="hero">
+      <div class="hero-content">
+        <h3>Hi, it's me</h3>
+        <h1>AIZA TUGOLBAEVA</h1>
+        <h1>And I'm a <span>Aspiring Developer</span></h1>
+        <p>I'm a 17-year-old student exploring the world of programming.  
+          I’ve studied Java, Spring Boot, Python, HTML, CSS, and JavaScript — still discovering which path suits me best.  
+          I love learning how technology works and creating small projects that help me grow as a developer.  
+          Last summer I managed my family’s guest house at Issyk-Kul, which taught me independence and responsibility.</p>
 
-    <div class="hero-inner">
-      <div class="intro">
-        <h1>2nd year college student</h1>
-        <div class="sub">And I'm  <span style="color:var(--white)"><strong style="color:var(--accent)">Aiza Tugolbaeva,</strong></span></div>
-
-        <p>a 2nd year student at Ala-Too College, and I'm 17 years old. I've previously studied Python and HTML, and I'd like to learn more and improve my frontend skills.</p>
-        <div class="greeting-wrapper">
-          <h2 id="greeting">Добро пожаловать!</h2>
-          <button id="askName" class="btn btn-primary">Сказать имя</button>
-        </div>
-
-        <div class="socials" aria-hidden="false">
-          <a class="icon-btn" href="#" title="Facebook" aria-label="Facebook">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 12.07C22 6.487 17.523 2 12 2S2 6.487 2 12.07c0 4.991 3.657 9.126 8.438 9.878v-6.99H7.898v-2.888h2.54V9.845c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.196 2.238.196v2.47h-1.26c-1.242 0-1.628.772-1.628 1.562v1.874h2.773l-.443 2.888h-2.33v6.99C18.343 21.197 22 17.06 22 12.07z" fill="currentColor"/></svg>
-          </a>
-
-          <a class="icon-btn" href="#" title="LinkedIn" aria-label="LinkedIn">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4.98 3.5C4.98 4.886 3.87 6 2.49 6S0 4.886 0 3.5 1.11.999 2.49.999 4.98 2.114 4.98 3.5zM.2 8.3h4.56V24H.2V8.3zM8.94 8.3h4.38v2.12h.06c.61-1.15 2.1-2.36 4.32-2.36 4.62 0 5.46 3.04 5.46 6.99V24h-4.56v-7.11c0-1.7-.03-3.89-2.37-3.89-2.38 0-2.74 1.86-2.74 3.78V24H8.94V8.3z" fill="currentColor"/></svg>
-          </a>
-
-          <a class="icon-btn" href="#" title="Email" aria-label="Email">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M0 4v16h24V4H0zm12 10.5L2.5 6h19L12 14.5z" fill="currentColor"/></svg>
-          </a>
-        </div>
-
-        <div class="actions">
-          <a class="btn btn-primary" href="#" role="button">Download CV</a>
-          <a class="btn btn-outline" href="#portfolio" role="button">Portfolio</a>
+        <div class="btn-group">
+          <a href="#contact" class="btn btn-primary">Contact me</a>
+          <a href="#portfolio" class="btn btn-outline">See Portfolio</a>
         </div>
       </div>
 
-      <div class="portrait-wrap" aria-hidden="true">
-        <div class="hexagon" aria-hidden="true">
-          <img src="firstphoto.jpg" alt="Portrait">
-          <div class="hex-shadow" aria-hidden="true"></div>
-        </div>
+      <div class="hero-image">
+        <img src="firstphoto.jpg" alt="Profile">
       </div>
     </div>
-  </header>
-  <section class="about-row" id="about">
-    <aside class="profile-card">
-      <div class="avatar-ring">
-        <img src="myphoto.jpg" alt="Аватар" class="avatar">
-      </div>
-
-      <div class="card-body">
-        <h3 class="card-name">Tugolbaeva Aiza</h3>
-        <p class="card-roles">
-          Backend Developer<br>
-        </p>
-      </div>
-    </aside>
-<!-- RIGHT: education list -->
-    <article class="education">
-      <h2 class="section-title">About <span>Me</span></h2>
-
-      <nav class="tabs">
-        <button class="tab active">Education Qualification</button>
-      </nav>
-
-        <div class="edu-item">
-          <h4 class="edu-title">Diploma in Computer Software Engineering</h4>
-          <ul>
-            <li><strong>Institute :</strong> Ala-Too International College, Bishkek</li>
-            <li><strong>Session :</strong> 2024 - 2027</li>
-            <li><strong>Result :</strong> Running (2nd Year)</li>
-          </ul>
-        </div>
-
-        <div class="edu-item">
-          <h4 class="edu-title">Secondary School Certificate (SSC)</h4>
-          <ul>
-            <li><strong>Institute :</strong>Ecological and Economic Lyceum No. 65</li>
-            <li><strong>Session :</strong> 2015-2024</li>
-            <li><strong>Result :</strong> GPA 5.00</li>
-          </ul>
-        </div>
-      </div>
-    </article>
   </section>
 
-  <!-- SKILLS SECTION (исправлённый) -->
-<section class="skills-section" id="skills">
-  <h2 class="section-title centered">My <span>Skills</span></h2>
-
-  <div class="skills-grid">
-    <div class="skills-col">
-      <div class="skill">
-        <div class="skill-center">
-          <img src="html-icon.png" alt="HTML" class="skill-icon">
-          <div class="skill-name">HTML</div>
-        </div>
-        <div class="skill-bar" data-percent="80">
-          <div class="skill-fill"></div>
-          <div class="skill-percent">80%</div>
-        </div>
+  <section id="about" class="about-section">
+    <h2 class="section-title">About <span>Me</span></h2>
+    <div class="about-content">
+      <div class="profile-card">
+        <img src="myphoto.jpg" alt="Avatar" class="avatar">
+        <h3>AIZA TUGOLBAEVA</h3>
+        <p>Aspiring Developer</p>
       </div>
 
-      <div class="skill">
-        <div class="skill-center">
-          <img src="css-icon.png" alt="CSS" class="skill-icon">
-          <div class="skill-name">CSS</div>
+      <div class="education-content">
+        <div class="education-tabs">
+          <button class="tab active">Education Qualification</button>
         </div>
-        <div class="skill-bar" data-percent="70">
-          <div class="skill-fill"></div>
-          <div class="skill-percent">70%</div>
+
+        <div class="edu-item">
+          <h4>Diploma in Computer Software Engineering</h4>
+          <ul>
+            <li><strong>Institute:</strong> Ala-Too International College, Bishkek</li>
+            <li><strong>Session:</strong> 2024 - 2027</li>
+            <li><strong>Result:</strong> Running (2nd Year)</li>
+          </ul>
+        </div>
+
+        <div class="edu-item">
+          <h4>Secondary School Certificate (SSC)</h4>
+          <ul>
+            <li><strong>Institute:</strong> Ecological and Economic Lyceum No. 65</li>
+            <li><strong>Session:</strong> 2015 - 2024</li>
+            <li><strong>Result:</strong> GPA 4.00</li>
+          </ul>
         </div>
       </div>
     </div>
+  </section>
 
-    <div class="skills-col">
+  <section id="skills" class="skills-section">
+    <h2 class="section-title">My <span>Skills</span></h2>
+    <div class="skills-grid">
       <div class="skill">
-        <div class="skill-center">
-          <img src="js-icon.png" alt="JS" class="skill-icon">
-          <div class="skill-name">JavaScript</div>
-        </div>
-        <div class="skill-bar" data-percent="60">
-          <div class="skill-fill"></div>
-          <div class="skill-percent">60%</div>
+        <div class="skill-icon" style="background-image: url('html.png'); 
+            background-size: cover; 
+            background-position: center; 
+            width: 70px; 
+            height: 70px; 
+            border-radius: 50%;"></div>
+        <div class="skill-info">
+          <div class="skill-name">HTML - 5</div>
+          <div class="skill-bar">
+            <div class="skill-progress" style="width: 50%">
+              <span class="skill-percent">50%</span>
+            </div>
+          </div>
         </div>
       </div>
 
       <div class="skill">
-        <div class="skill-center">
-          <img src="Elipse 3.png" alt="Figma" class="skill-icon">
+        <div class="skill-icon" style="background-image: url('css3.png'); 
+            background-size: cover; 
+            background-position: center; 
+            width: 70px; 
+            height: 70px; 
+            border-radius: 50%;"></div>
+        <div class="skill-info">
+          <div class="skill-name">CSS - 3</div>
+          <div class="skill-bar">
+            <div class="skill-progress" style="width: 50%">
+              <span class="skill-percent">50%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="skill-icon" style="background-image: url('js.png'); 
+            background-size: cover; 
+            background-position: center; 
+            width: 70px; 
+            height: 70px; 
+            border-radius: 50%;"></div>
+        <div class="skill-info">
+          <div class="skill-name">Java Script</div>
+          <div class="skill-bar">
+            <div class="skill-progress" style="width: 50%">
+              <span class="skill-percent">50%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="skill-icon" style="background-image: url('figma.png'); 
+            background-size: cover; 
+            background-position: center; 
+            width: 70px; 
+            height: 70px; 
+            border-radius: 50%;"></div>
+        <div class="skill-info">
           <div class="skill-name">Figma</div>
+          <div class="skill-bar">
+            <div class="skill-progress" style="width: 50%">
+              <span class="skill-percent">50%</span>
+            </div>
+          </div>
         </div>
-        <div class="skill-bar" data-percent="50">
-          <div class="skill-fill"></div>
-          <div class="skill-percent">50%</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="services-section">
+    <h2 class="section-title">My <span>Services</span></h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">🌐</div>
+        <h3>Backend Basics</h3>
+        <p>I’ve worked with Java, Python, and Spring Boot to understand how servers and databases work.  
+        I enjoy exploring how frontend connects with backend logic.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">💻</div>
+        <h3>Web Development</h3>
+        <p>I can create simple and responsive web pages using HTML, CSS, and JavaScript.  
+        I focus on clean design, good structure, and user-friendly interfaces.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🎨</div>
+        <h3>Learning & Experimenting</h3>
+        <p>I love learning new technologies and building small personal projects  
+        to improve my skills and find the direction that inspires me most.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio" class="portfolio-section">
+    <h2 class="section-title">My <span>Portfolio</span></h2>
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <a href="https://github.com/Aizakeshka/DNA" target="_blank">
+          <img src="project1.png" alt="Project 1">
+          <div class="portfolio-overlay">
+            <span>🔗</span>
+          </div>
+        </a>
+      </div>
+      <div class="portfolio-item">
+        <a href="https://github.com/Aizakeshka/nuclear" target="_blank">
+          <img src="project2.png" alt="Project 2">
+          <div class="portfolio-overlay">
+            <span>🔗</span>
+          </div>
+        </a>
+      </div>
+      <div class="portfolio-item">
+        <a href="https://github.com/Aizakeshka/BookingShopAiza" target="_blank">
+          <img src="project3.png" alt="Project 3">
+          <div class="portfolio-overlay">
+            <span>🔗</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>  
+
+  <section id="contact" class="contact-section">
+    <h2 class="section-title">Contact <span>Me</span></h2>
+    <div class="contact-content">
+      <div class="contact-info">
+        <div class="logo" style="margin-bottom: 20px;"></div>
+        <h3>Let's Work Together</h3>
+        <p>I'm a student and aspiring developer who enjoys creating websites and learning new technologies.  
+          I’m open to small projects, collaborations, or internships where I can grow and apply my skills.  
+          If you have an idea or project — I’d be happy to help and learn along the way!</p>
+        
+        <div class="social-icons">
+          <a href="https://wa.me/996771884455" target="_blank">
+            <img src="Digital_Glyph_White.png" alt="WhatsApp" width="30" height="30">
+          </a>
+          <a href="https://instagram.com/aizakeshka" target="_blank">
+            <img src="Instagram_Glyph_White.png" alt="Instagram" width="30" height="30">
+          </a>
+          <a href="https://github.com/Aizakeshka" target="_blank">
+            <img src="GitHub_Invertocat_Light.png" alt="GitHub" width="30" height="30">
+          </a>
         </div>
       </div>
+
+      <form class="contact-form">
+        <div class="form-row">
+          <input type="text" placeholder="First Name" required>
+          <input type="text" placeholder="Last Name" required>
+        </div>
+        <div class="form-row">
+          <input type="tel" placeholder="Phone" required>
+          <input type="text" placeholder="Subject" required>
+        </div>
+        <input type="email" placeholder="Email" required>
+        <textarea placeholder="Message" required></textarea>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- My Services Section -->
-<section class="services-section" id="services">
-  <h2 class="section-title centered">My <span>Services</span></h2>
-
-  <div class="three-cols">
-    <div class="service-card">
-      <div class="icon">💻</div>
-      <h3 class="service-title">Web Development</h3>
-      <p class="service-text">Creating modern and responsive websites using HTML, CSS, and JavaScript with clean, maintainable code.</p>
-    </div>
-
-    <div class="service-card">
-      <div class="icon">🎨</div>
-      <h3 class="service-title">UI / UX Design</h3>
-      <p class="service-text">Designing smooth and visually appealing interfaces that are intuitive and user-friendly.</p>
-    </div>
-
-    <div class="service-card">
-      <div class="icon">⚙️</div>
-      <h3 class="service-title">Backend Integration</h3>
-      <p class="service-text">Connecting front-end with servers and APIs to bring websites and apps to life.</p>
-    </div>
-  </div>
-</section>
-
-
-<section class="portfolio-section" id="portfolio">
-  <h2 class="section-title centered">My <span>Portfolio</span></h2>
-
-  <div class="three-cols">
-    <div class="card">
-      <img src="card-1.jpg" alt="Project 1" class="card-img">
-      <div class="card-body">
-        <h3 class="card-title">Проект 1</h3>
-        <p class="card-text">Короткое описание проекта — что делает и почему классно.</p>
-      </div>
-      <div class="card-footer">
-        <a href="#" class="btn small">Подробнее</a>
-        <a href="#" class="btn outline small">Демо</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="card-2.jpg" alt="Project 2" class="card-img">
-      <div class="card-body">
-        <h3 class="card-title">Проект 2</h3>
-        <p class="card-text">Короткое описание проекта — технологии и результат.</p>
-      </div>
-      <div class="card-footer">
-        <a href="#" class="btn small">Подробнее</a>
-        <a href="#" class="btn outline small">Демо</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="card-3.jpg" alt="Project 3" class="card-img">
-      <div class="card-body">
-        <h3 class="card-title">Проект 3</h3>
-        <p class="card-text">Короткое описание — фокус на самом важном.</p>
-      </div>
-      <div class="card-footer">
-        <a href="#" class="btn small">Подробнее</a>
-        <a href="#" class="btn outline small">Демо</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ---------- CONTACT ME ---------- -->
-<section class="contact-section" id="contact">
-  <div class="container contact-row">
-    
-    <!-- Левый блок с текстом -->
-    <div class="contact-text">
-      <h2 class="section-title">Contact <span>Me</span></h2>
-      <p>Hello! I’m always open to discussing new projects, creative ideas, or opportunities to be part of your visions. Feel free to send me a message, and I’ll get back to you as soon as possible!</p>
-      <p>You can use the form on the right to reach out with your questions or proposals.</p>
-    </div>
-    
-    <!-- Правая колонка с формой -->
-    <form class="contact-form">
-      <div class="form-row">
-        <input type="text" name="firstName" placeholder="First Name" required>
-        <input type="text" name="lastName" placeholder="Last Name" required>
-      </div>
-      <div class="form-row">
-        <input type="email" name="email" placeholder="Email" required>
-      </div>
-      <div class="form-row">
-        <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary">Send</button>
-    </form>
-
-  </div>
-</section>
-
-
-  <footer class="footer">
-    <p>© 2025 Tugolbaeva Aiza. All Rights Reserved.</p>
+  <footer>
+    <p>Copywriter 2025 All Rights Reserved</p>
   </footer>
 
-  <script src = "main.js"></script>
-
+  <script src="main.js"></script>
 </body>
 </html>
-
