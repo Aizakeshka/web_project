@@ -1,4 +1,3 @@
-// ===== SMOOTH SCROLL =====
 document.addEventListener('DOMContentLoaded', () => {
   const nav = document.querySelector('nav');
   const getNavHeight = () => (nav ? nav.offsetHeight : 0);
@@ -9,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function animateScrollTo(targetY, duration = DURATION_MS, callback) {
     const startY = window.pageYOffset;
     const diff = targetY - startY;
-    if (!diff) { if (callback) callback(); return; }
+    if (!diff) { if (callback) callback(); return; }  
     let startTime = null;
     let cancel = false;
 
@@ -61,8 +60,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-
-  // ===== THEME TOGGLE =====
 const themeBtn = document.createElement('button');
 themeBtn.textContent = '☀️';
 themeBtn.className = 'theme-btn';
@@ -74,7 +71,6 @@ themeBtn.addEventListener('click', () => {
 });
 
 
-  // ===== SCROLL TO TOP BUTTON =====
   const scrollTopBtn = document.createElement('button');
   scrollTopBtn.innerHTML = '↑';
   scrollTopBtn.className = 'scroll-top';
@@ -104,7 +100,7 @@ themeBtn.addEventListener('click', () => {
     this.style.boxShadow = '0 5px 20px rgba(0, 238, 255, 0.3)';
   });
 
-  // ===== TYPING EFFECT =====
+  
   const nameElement = document.querySelector('.hero-content h1');
   if(nameElement){
     const fullText = nameElement.textContent;
@@ -120,7 +116,8 @@ themeBtn.addEventListener('click', () => {
     typeEffect();
   }
 
-// ===== FORM SUBMISSION =====
+
+
 function handleSubmit(event) {
   event.preventDefault();
 
@@ -175,8 +172,6 @@ const form = document.querySelector('.contact-form');
 if (form) form.addEventListener('submit', handleSubmit);
 
 
-
-  // ===== SOCIAL ICONS LINKS =====
   const socialLinks = document.querySelectorAll('.social-icons a');
   socialLinks.forEach(link => {
     link.addEventListener('click', function(e){
