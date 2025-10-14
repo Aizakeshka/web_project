@@ -1,4 +1,4 @@
-// ===== SMOOTH SCROLL (custom easing + duration) =====
+// ===== SMOOTH SCROLL =====
 document.addEventListener('DOMContentLoaded', () => {
   const nav = document.querySelector('nav');
   const getNavHeight = () => (nav ? nav.offsetHeight : 0);
@@ -120,22 +120,33 @@ themeBtn.addEventListener('click', () => {
     typeEffect();
   }
 
-  // ===== FORM SUBMISSION =====
+// ===== FORM SUBMISSION =====
 function handleSubmit(event) {
   event.preventDefault();
 
   const form = document.querySelector('.contact-form');
-  const nameEl = form.querySelector('input[type="text"]');
-  const emailEl = form.querySelector('input[type="email"]');
-  const msgEl = form.querySelector('textarea');
+  if (!form) return false;
 
-  const name = nameEl.value.trim();
-  const email = emailEl.value.trim();
-  const message = msgEl.value.trim();
+  const firstEl = form.querySelector('input[placeholder="First Name"]');
+  const lastEl  = form.querySelector('input[placeholder="Last Name"]');
+  const phoneEl = form.querySelector('input[placeholder="Phone"]');
+  const subjectEl = form.querySelector('input[placeholder="Subject"]');
+  const emailEl = form.querySelector('input[placeholder="Email"]');
+  const msgEl   = form.querySelector('textarea[placeholder="Message"]');
 
-  if (!name || !email || !message) {
+  const firstName = (firstEl && firstEl.value) ? firstEl.value.trim() : '';
+  const lastName  = (lastEl  && lastEl.value)  ? lastEl.value.trim()  : '';
+  const phone     = (phoneEl && phoneEl.value) ? phoneEl.value.trim() : '';
+  const subject   = (subjectEl && subjectEl.value) ? subjectEl.value.trim() : '';
+  const email     = (emailEl && emailEl.value) ? emailEl.value.trim() : '';
+  const message   = (msgEl   && msgEl.value)   ? msgEl.value.trim()   : '';
+
+  if (!firstName || !lastName || !phone || !subject || !email || !message) {
     alert('Please fill in all fields');
-    if (!name) nameEl.focus();
+    if (!firstName) firstEl.focus();
+    else if (!lastName) lastEl.focus();
+    else if (!phone) phoneEl.focus();
+    else if (!subject) subjectEl.focus();
     else if (!email) emailEl.focus();
     else msgEl.focus();
     return false;
@@ -148,13 +159,21 @@ function handleSubmit(event) {
     return false;
   }
 
-  alert(`Thank you, ${name}! Your message has been sent successfully`);
+  const phonePattern = /^\+?\d{7,15}$/;
+  if (!phonePattern.test(phone)) {
+    alert('Invalid phone number. Use digits, optional leading +, 7–15 characters.');
+    phoneEl.focus();
+    return false;
+  }
+
+  alert(`Thank you, ${firstName} ${lastName}! Your message about "${subject}" has been sent successfully.`);
   form.reset();
   return true;
 }
 
 const form = document.querySelector('.contact-form');
 if (form) form.addEventListener('submit', handleSubmit);
+
 
 
   // ===== SOCIAL ICONS LINKS =====
