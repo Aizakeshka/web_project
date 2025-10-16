@@ -1,3 +1,4 @@
+// Скролл по секциям
 document.addEventListener('DOMContentLoaded', () => {
   const nav = document.querySelector('nav');
   const getNavHeight = () => (nav ? nav.offsetHeight : 0);
@@ -59,7 +60,80 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+// Свечение имени и фамилии
+const logo = document.querySelector('.logo');
+logo.addEventListener('mouseenter', () => {
+  logo.style.color = '#fcfafcff'; 
+  logo.style.textShadow = `
+    0 0 5px #fcfafcff,
+    0 0 10px #fcfafcff,
+    0 0 20px #ff90ff
+  `;
+});
 
+logo.addEventListener('mouseleave', () => {
+  logo.style.color = '';
+  logo.style.textShadow = 'none';
+});
+
+// Бургер меню для мобилок
+document.addEventListener('DOMContentLoaded', () => {
+  const burger = document.getElementById('hamburger');
+  const menu = document.getElementById('menu');
+
+  if (!burger || !menu) return;
+
+  burger.setAttribute('aria-expanded', 'false');
+  menu.setAttribute('aria-hidden', 'true');
+
+  function openMenu() {
+    burger.setAttribute('aria-expanded', 'true');
+    burger.classList.add('is-open');
+    menu.classList.add('open');
+    menu.setAttribute('aria-hidden', 'false');
+    const firstLink = menu.querySelector('a');
+    if (firstLink) firstLink.focus();
+  }
+
+  function closeMenu() {
+    burger.setAttribute('aria-expanded', 'false');
+    burger.classList.remove('is-open');
+    menu.classList.remove('open');
+    menu.setAttribute('aria-hidden', 'true');
+    burger.focus();
+  }
+
+  burger.addEventListener('click', (e) => {
+    const expanded = burger.getAttribute('aria-expanded') === 'true';
+    expanded ? closeMenu() : openMenu();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && menu.classList.contains('open')) {
+      closeMenu();
+    }
+  });
+
+  menu.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', () => {
+      if (menu.classList.contains('open')) closeMenu();
+    });
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!menu.contains(e.target) && !burger.contains(e.target) && menu.classList.contains('open')) {
+      closeMenu();
+    }
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768 && menu.classList.contains('open')) {
+      closeMenu();
+    }
+  });
+});
+
+// Переключение тем
 const themeBtn = document.createElement('button');
 themeBtn.textContent = '☀️';
 themeBtn.className = 'theme-btn';
@@ -70,8 +144,8 @@ themeBtn.addEventListener('click', () => {
   themeBtn.textContent = isLight ? '🌙' : '☀️';
 });
 
-
-  const scrollTopBtn = document.createElement('button');
+// Скрол наверх
+const scrollTopBtn = document.createElement('button');
   scrollTopBtn.innerHTML = '↑';
   scrollTopBtn.className = 'scroll-top';
   document.body.appendChild(scrollTopBtn);
@@ -100,7 +174,7 @@ themeBtn.addEventListener('click', () => {
     this.style.boxShadow = '0 5px 20px rgba(0, 238, 255, 0.3)';
   });
 
-  
+  // Эффект печатания текста
   const nameElement = document.querySelector('.hero-content h1');
   if(nameElement){
     const fullText = nameElement.textContent;
@@ -116,8 +190,7 @@ themeBtn.addEventListener('click', () => {
     typeEffect();
   }
 
-
-
+// Заполнение формы
 function handleSubmit(event) {
   event.preventDefault();
 
