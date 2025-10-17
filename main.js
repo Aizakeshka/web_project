@@ -59,22 +59,6 @@ function initSmoothScroll() {
   }
 }
 
-// Свечение имени и фамилии
-const logo = document.querySelector('.logo');
-logo.addEventListener('mouseenter', () => {
-  logo.style.color = '#fcfafcff'; 
-  logo.style.textShadow = `
-    0 0 5px #fcfafcff,
-    0 0 10px #fcfafcff,
-    0 0 20px #ff90ff
-  `;
-});
-
-logo.addEventListener('mouseleave', () => {
-  logo.style.color = '';
-  logo.style.textShadow = 'none';
-});
-
 //Бургер меню для мобилок
 function initBurgerMenu() {
   const burger = $('#hamburger');
@@ -147,6 +131,34 @@ function initScrollTop() {
   on(btn, 'mouseleave', () => btn.classList.remove('scroll-top--hover'));
 }
 
+//Эффект печатания
+document.addEventListener('DOMContentLoaded', () => {
+  simpleTypeEffect('.hero-content h1', 80);
+});
+
+function simpleTypeEffect(selector = '.hero-content h1', speed = 80) {
+  const el = document.querySelector(selector);
+  if (!el) return;               
+  const text = el.textContent.trim();
+  if (!text) return;              
+
+  el.textContent = '';         
+  let i = 0;
+
+  function step() {
+    if (i < text.length) {
+      el.textContent += text[i++];
+      setTimeout(step, speed);
+    }
+  }
+  step();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  simpleTypeEffect('.hero-content h1', 80);
+});
+
+
 //Валидация формы
 function initForm() {
   const form = document.querySelector('.contact-form');
@@ -190,4 +202,3 @@ function initSocialLinks() {
     if (a.getAttribute('href') === '#') e.preventDefault();
   }));
 }
-
