@@ -147,34 +147,6 @@ function initScrollTop() {
   on(btn, 'mouseleave', () => btn.classList.remove('scroll-top--hover'));
 }
 
-//Эффект печатания
-document.addEventListener('DOMContentLoaded', () => {
-  simpleTypeEffect('.hero-content h1', 80);
-});
-
-function simpleTypeEffect(selector = '.hero-content h1', speed = 80) {
-  const el = document.querySelector(selector);
-  if (!el) return;               
-  const text = el.textContent.trim();
-  if (!text) return;              
-
-  el.textContent = '';         
-  let i = 0;
-
-  function step() {
-    if (i < text.length) {
-      el.textContent += text[i++];
-      setTimeout(step, speed);
-    }
-  }
-  step();
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-  simpleTypeEffect('.hero-content h1', 80);
-});
-
-
 //Валидация формы
 function initForm() {
   const form = document.querySelector('.contact-form');
@@ -218,3 +190,4 @@ function initSocialLinks() {
     if (a.getAttribute('href') === '#') e.preventDefault();
   }));
 }
+
