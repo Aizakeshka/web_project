@@ -56,6 +56,13 @@
       gap: 10px;
     }
 
+    .logo:hover {
+      color: var(--accent);
+      text-shadow: none;
+      filter: none;
+      transition: none;
+    }
+
     nav ul {
       display: flex;
       gap: 30px;
